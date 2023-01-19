@@ -9,22 +9,27 @@ const PostSection = ({ id, title, body, tags }: iPost) => {
       style={{
         padding: '10px',
         maxWidth: '1024px',
-        height: '200px',
         width: '100%',
         margin: '15px 10px',
         borderRadius: '10px',
         boxShadow: '2px 5px 5px 5px lightgray',
       }}
     >
-      <h5 className='card-title1'>
-        {title}
+      <h5 style={{ padding: '0 20px' }}>
+        <p style={{ fontWeight: '700' }}>{title}</p>
+
         <p className='card.body1'>{body}</p>
         <p style={{ fontWeight: '500' }}>
           Tags:
           {tags.map((tag) => (
-            <span style={{ backgroundColor: 'white', color: 'lightblue' }}>
-              {'  '}
-              {tag.toLocaleUpperCase()}{' '}
+            <span
+              style={{
+                backgroundColor: 'white',
+                color: 'lightblue',
+                padding: '0 10px ',
+              }}
+            >
+              {tag.toLocaleUpperCase()}
             </span>
           ))}
         </p>
