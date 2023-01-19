@@ -25,7 +25,7 @@ const Header = () => {
           <Nav.Link href='#magical'>Magical</Nav.Link>
           <Nav.Link href='#american'>French</Nav.Link>
           <Nav.Link href='#french'>American</Nav.Link>
-          <Nav.Link href='#rime'>Crime</Nav.Link>
+          <Nav.Link href='#crime'>Crime</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

@@ -24,7 +24,6 @@ const Posts: React.FC<iProps> = ({ posts, filter }) => {
           : `Show ${filter.toUpperCase()}`}
       </button>
       <div
-        className=''
         style={{
           display: 'flex',
           justifyContent: 'center',
