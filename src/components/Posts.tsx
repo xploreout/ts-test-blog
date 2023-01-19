@@ -18,12 +18,16 @@ const Posts: React.FC<iProps> = ({ posts, filter }) => {
 
   return (
     <div style={{ marginTop: '50px' }}>
-      <button onClick={handleClick} style={{ width: '180px' }}>
+      <button onClick={handleClick} style={{ width: '100%' }}>
         {showData ? `Hide ${filter}` : `Show ${filter}`}
       </button>
       <div
-        className='d-inline-flex p-5'
-        style={{ maxWidth: '1024px', flexFlow: 'wrap' }}
+        className=''
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexFlow: 'wrap',
+        }}
       >
         {showData &&
           posts &&
