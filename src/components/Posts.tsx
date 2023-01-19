@@ -19,7 +19,9 @@ const Posts: React.FC<iProps> = ({ posts, filter }) => {
   return (
     <div style={{ marginTop: '50px' }}>
       <button onClick={handleClick} style={{ width: '100%' }}>
-        {showData ? `Hide ${filter}` : `Show ${filter}`}
+        {showData
+          ? `Hide ${filter.toUpperCase()}`
+          : `Show ${filter.toUpperCase()}`}
       </button>
       <div
         className=''

@@ -27,6 +27,8 @@ const Blog = () => {
     getSections()
   }, [result])
 
+  const TAGS = ['History', 'Magical', 'French', 'American', 'Crime']
+  
   const getSections = () => {
     if (result === undefined) return <h1>Loading...</h1>
     const filteredCrime = result.filter((item) => item.tags.includes('crime'))
@@ -49,21 +51,11 @@ const Blog = () => {
 
   return (
     <div className='Container'>
-      <section id='History'>
-        <Posts posts={historyData} filter='History' />
-      </section>
-      <section id='Magical'>
-        <Posts posts={magicalData} filter='Magical' />
-      </section>
-      <section id='French'>
-        <Posts posts={frenchData} filter='French' />
-      </section>
-      <section id='American'>
-        <Posts posts={americanData} filter='American' />
-      </section>
-      <section id='Crime'>
-        <Posts posts={crimeData} filter='Crime' />
-      </section>
+      {TAGS.map((tag) => (
+        <section id={tag.toLowerCase()}>
+          {<Posts posts={historyData} filter={tag.toLowerCase()} />}
+        </section>
+      ))}
     </div>
   )
 }

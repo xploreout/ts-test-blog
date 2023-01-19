@@ -7,7 +7,7 @@ import '../App.css'
 
 const Header = () => {
   const handleLogoClick = () => {
-    return null
+    window.location.reload()
   }
   return (
     <Navbar
@@ -18,12 +18,14 @@ const Header = () => {
     >
       <Container>
         <Nav>
-          <h2 onClick={handleLogoClick}>Tiny Blog</h2>
-          <Nav.Link href='#History'>History</Nav.Link>
-          <Nav.Link href='#Magical'>Magical</Nav.Link>
-          <Nav.Link href='#American'>French</Nav.Link>
-          <Nav.Link href='#French'>American</Nav.Link>
-          <Nav.Link href='#Crime'>Crime</Nav.Link>
+          <h2 onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
+            Tiny Blog
+          </h2>
+          <Nav.Link href='#history'>History</Nav.Link>
+          <Nav.Link href='#magical'>Magical</Nav.Link>
+          <Nav.Link href='#american'>French</Nav.Link>
+          <Nav.Link href='#french'>American</Nav.Link>
+          <Nav.Link href='#rime'>Crime</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

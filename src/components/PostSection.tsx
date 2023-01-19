@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const PostSection = ({ id, title, body, tags }: iPost) => {
   return (
     <div
-      className='post-card'
       style={{
         padding: '10px',
         maxWidth: '1024px',
@@ -24,8 +23,7 @@ const PostSection = ({ id, title, body, tags }: iPost) => {
           {tags.map((tag) => (
             <span
               style={{
-                backgroundColor: 'white',
-                color: 'lightblue',
+                color: 'blue',
                 padding: '0 10px ',
               }}
             >
